@@ -1,6 +1,0 @@
-#!/bin/bash
-BASEDIR=$(dirname "$0")
-echo "Compiling generated tests source files..."
-javac -cp "$BASEDIR/${libsClassPath}" "$BASEDIR/${generatedTestsJavaFilePath}"
-echo "Running generated tests..."
-java -cp "$BASEDIR/${libsClassPath}":"$BASEDIR/${generatedTestsSourceFolder}" org.testng.TestNG ${testngXMLFile}
